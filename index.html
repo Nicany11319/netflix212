@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix Page</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+</head>
+<body>
+    <main>
+        <header>
+            <a href="#" class="logo"><img src="img/Netflix.png" alt="logo netflix"></a>
+            <ul class="navigation">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">TV Shows</a></li>
+                <li><a href="#">Movies</a></li>
+                <li><a href="#">Lastest</a></li>
+                <li><a href="#">My List</a></li>
+            </ul>
+            <div class="search">
+                <input type="text" placeholder="Search">
+                <button class="btbuscar"><span class="material-icons">search</span></button>
+            </div>
+        </header>
+        <section class="banner">
+            <img src="img/Kill bill.jpg" alt="personaje" class="bg"/>
+            <span class="sombraImg"></span>
+            <div class="content">
+                <img src="img/logo kill.png" alt="" class="movieTitle" width="1000">
+            <h4>
+                <span>2003</span>
+                <span><i>+18</i></span>
+                <span>Pelicula</span>
+                <span>Violencia</span>
+            </h4>
+            <p>
+                Mamba Negra es una asesina que, el día de su boda, es atacada por los miembros de la banda de su jefe, Bill. Sin embargo consigue sobrevivir, aunque queda en coma. Cinco años después despierta, con un deseo de venganza.
+            </p>
+            <div class="buttons">
+                <a href="#">Play</a>
+                <a href="#">My List</a>
+            </div>
+            </div>
+            <a href="#" class="play" onclick="toggleVideo();"><img src="img/play.png" alt="trailer">Trailer</a>
+        </section>
+        <section class="trailer">
+            <video src="img/Y2meta.app - Kill Bill_ Vol. 1 (2003) Official Trailer - Uma Thurman, Lucy Liu Action Movie HD.mp4" controls="true"></video>
+            <img src="img/Close.png" alt="" class="close" onclick="toggleVideo();">
+
+        </section>
+    </main>
+    <script>
+        function toggleVideo(){
+            const trailer= document.querySelector(".trailer");
+            const video = document.querySelector("video");
+            trailer.classList.toggle("active");
+            video.currentTime=0;
+            video.pause();
+        }
+    </script>
+</body>
+</html>
